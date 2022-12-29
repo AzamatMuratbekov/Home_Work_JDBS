@@ -13,7 +13,7 @@ public class DB {
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-            System.out.println("Ok");
+            System.out.println("Соединение установлено");
         }catch (SQLException e){
             e.printStackTrace();
         }return conn;
