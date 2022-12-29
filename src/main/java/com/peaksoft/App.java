@@ -27,7 +27,7 @@ public class App {
 //        addMayer(4,"Сергей Собянин",2);
 //        addMayer(5,"Эрик Адамс",1);
 //        addCityAndCountryToArrayList();
-        getCityByid(3);
+//        getCityByid(3);
     }
 
     public static void creatTableCity() {
@@ -111,7 +111,8 @@ public class App {
             statement.setInt(1, id);
             ResultSet rs = statement.executeQuery();
             while (rs.next()) {
-                System.out.println((rs.getString("city_name") + " " + rs.getString("country_name") + " " + rs.getString("mer_name")));
+                System.out.println("Город: "+rs.getString("city_name") + "  Страна: " + rs.getString("country_name") + " Мэр города: " + rs.getString("mer_name"));
+                System.out.println("Запрос выполнен...");
             }
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
